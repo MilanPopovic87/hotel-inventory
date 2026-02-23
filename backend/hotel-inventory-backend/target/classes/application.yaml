@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: hotel-inventory-backend
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    defer-datasource-initialization: true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  port: 8080
+
+jwt:
+  secret: YourSuperSecretKeyAtLeast32CharsLong123!
+  expirationMinutes: 60

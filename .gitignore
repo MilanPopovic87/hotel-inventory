@@ -1,0 +1,76 @@
+# ========================================
+# Backend (Spring Boot / Java)
+# ========================================
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+backend/HELP.md
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IDE-specific files (STS, IntelliJ, VS Code)
+backend/.apt_generated
+backend/.classpath
+backend/.factorypath
+backend/.project
+backend/.settings
+backend/.springBeans
+backend/.sts4-cache
+
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Maven wrapper
+.mvn/
+
+# Build folders for NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ========================================
+# Frontend (Angular / Node)
+# ========================================
+frontend/dist/
+frontend/tmp/
+frontend/out-tsc/
+frontend/bazel-out/
+
+# Node dependencies
+frontend/node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Angular cache
+.angular/cache/
+.sass-cache/
+
+# Miscellaneous
+/connect.lock
+/coverage/
+libpeerconnection.log
+testem.log
+__screenshots__/
+typings/
+
+# ========================================
+# IDEs (general)
+# ========================================
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+# ========================================
+# OS files
+# ========================================
+.DS_Store
+Thumbs.db
