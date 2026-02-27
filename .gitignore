@@ -1,76 +1,83 @@
 # ========================================
-# Backend (Spring Boot / Java)
+# Backend (Spring Boot / Maven)
 # ========================================
+
+# Build output
 backend/target/
+*.jar
+
+# Maven wrapper (KEEP wrapper files, ignore only jar inside backend if needed)
 backend/.mvn/wrapper/maven-wrapper.jar
-backend/HELP.md
-!**/src/main/**/target/
-!**/src/test/**/target/
 
-# IDE-specific files (STS, IntelliJ, VS Code)
-backend/.apt_generated
-backend/.classpath
-backend/.factorypath
-backend/.project
-backend/.settings
-backend/.springBeans
-backend/.sts4-cache
-
-.idea/
-*.iws
-*.iml
-*.ipr
-
-# Maven wrapper
-.mvn/
-
-# Build folders for NetBeans
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# Logs
+*.log
 
 # ========================================
 # Frontend (Angular / Node)
 # ========================================
-frontend/dist/
-frontend/tmp/
-frontend/out-tsc/
-frontend/bazel-out/
 
 # Node dependencies
 frontend/node_modules/
-npm-debug.log*
-yarn-error.log*
+
+# Angular build output
+frontend/dist/
+frontend/out-tsc/
+frontend/tmp/
+frontend/bazel-out/
 
 # Angular cache
+frontend/.angular/
 .angular/cache/
-.sass-cache/
 
-# Miscellaneous
-/connect.lock
-/coverage/
-libpeerconnection.log
-testem.log
-__screenshots__/
-typings/
+# Test / coverage
+frontend/coverage/
 
 # ========================================
-# IDEs (general)
+# Environment files (Secrets)
 # ========================================
+
+.env
+.env.*
+
+# ========================================
+# IDE Files
+# ========================================
+
+# IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
 .vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/
+
+# Eclipse / STS
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/.apt_generated
+backend/.factorypath
+backend/.springBeans
+backend/.sts4-cache
 
 # ========================================
-# OS files
+# OS Files
 # ========================================
+
 .DS_Store
 Thumbs.db
+
+# ========================================
+# Miscellaneous
+# ========================================
+
+connect.lock
+libpeerconnection.log
+testem.log
+.sass-cache/
+.history/

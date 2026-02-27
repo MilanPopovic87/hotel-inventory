@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: hotel-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: hotel_inventory
+      MYSQL_USER: student
+      MYSQL_PASSWORD: student123
+      MYSQL_ROOT_PASSWORD: root123
+    networks:
+      - hotel-net
+    # no ports mapping → host cannot access DB
+    # no volumes → fresh DB every time
+
+  backend:
+    build:
+      context: ./backend/hotel-inventory-backend
+      dockerfile: Dockerfile
+    container_name: hotel-backend
+    restart: on-failure
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/hotel_inventory?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: student
+      SPRING_DATASOURCE_PASSWORD: student123
+    depends_on:
+      - db
+    networks:
+      - hotel-net
+    # no ports mapping → host cannot access backend
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: hotel-frontend
+    restart: on-failure
+    ports:
+      - "80:80" # only expose frontend
+    depends_on:
+      - backend
+    networks:
+      - hotel-net
+
+# Custom internal network for all services
+networks:
+  hotel-net:
