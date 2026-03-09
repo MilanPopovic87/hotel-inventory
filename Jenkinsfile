@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                echo 'Cloning repository...'
-                git branch: 'docker-setup', url: 'https://github.com/MilanPopovic87/hotel-inventory.git'
-            }
-        }
-
         stage('Stop Old Containers') {
             steps {
                 echo 'Stopping existing containers if any...'
