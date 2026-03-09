@@ -3,6 +3,14 @@ pipeline {
 
     stages {
 
+        stage('Build Backend JAR') {
+            steps {
+                dir('backend/hotel-inventory-backend') {
+                    sh 'mvn clean package -DskipTests'
+                }
+            }
+        }
+
         stage('Stop Old Containers') {
             steps {
                 echo 'Stopping existing containers if any...'
