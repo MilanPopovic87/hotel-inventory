@@ -37,7 +37,7 @@ services:
     container_name: hotel-frontend
     restart: on-failure
     ports:
-      - "80:80" # only expose frontend
+      - "3000:80" # only expose frontend
     depends_on:
       - backend
     networks:
