@@ -13,3 +13,7 @@ spring:
   sql:
     init:
       mode: never
+
+jwt:
+  secret: testsecretkeytestsecretkeytest123456
+  expirationMinutes: 60
