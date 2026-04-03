@@ -1,1 +1,4 @@
 com/milanpopovic/hotelinventory/HotelInventoryBackendApplicationTests.class
+com/milanpopovic/hotelinventory/service/BookingServiceTest.class
+com/milanpopovic/hotelinventory/repository/BookingRepositoryTest.class
+com/milanpopovic/hotelinventory/service/RoomServiceTest.class

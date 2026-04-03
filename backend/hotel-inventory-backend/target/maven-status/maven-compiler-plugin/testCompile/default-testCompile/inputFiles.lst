@@ -1,1 +1,4 @@
 /home/milan/Documents/hotel-inventory-main/backend/hotel-inventory-backend/src/test/java/com/milanpopovic/hotelinventory/HotelInventoryBackendApplicationTests.java
+/home/milan/Documents/hotel-inventory-main/backend/hotel-inventory-backend/src/test/java/com/milanpopovic/hotelinventory/repository/BookingRepositoryTest.java
+/home/milan/Documents/hotel-inventory-main/backend/hotel-inventory-backend/src/test/java/com/milanpopovic/hotelinventory/service/BookingServiceTest.java
+/home/milan/Documents/hotel-inventory-main/backend/hotel-inventory-backend/src/test/java/com/milanpopovic/hotelinventory/service/RoomServiceTest.java
