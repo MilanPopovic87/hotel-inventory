@@ -22,21 +22,21 @@ pipeline {
         stage('Stop Old Containers') {
             steps {
                 echo 'Stopping existing containers if any...'
-                sh 'docker compose down || true'
+                sh 'docker-compose down || true'
             }
         }
 
         stage('Build Images') {
             steps {
                 echo 'Building Docker images...'
-                sh 'docker compose build'
+                sh 'docker-compose build'
             }
         }
 
         stage('Start Containers') {
             steps {
                 echo 'Starting application...'
-                sh 'docker compose up -d'
+                sh 'docker-compose up -d'
             }
         }
 
