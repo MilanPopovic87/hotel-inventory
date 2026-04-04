@@ -80,7 +80,7 @@ ng serve
 
 - **Frontend:** Angular, Angular Material, TypeScript
 - **Backend:** Spring Boot, Spring Data JPA, Hibernate
-- **Database:** H2 (development) / MySQL (production)
+- **Database:** MySQL
 - **Build tools:** Maven, Angular CLI
 - **DevOps:** Docker, Docker Compose, Jenkins, GitHub Webhooks
 
@@ -170,7 +170,7 @@ The project includes an automated CI/CD pipeline using Jenkins.
 The pipeline is defined in a `Jenkinsfile` stored in the repository and is triggered automatically by a GitHub webhook on every push.
 
 **Pipeline stages:**
-Checkout → Test → Build → Docker Build → Deploy → Health Check
+Checkout → Test → Build → Docker Build → Deploy 
 
 The pipeline:
 
